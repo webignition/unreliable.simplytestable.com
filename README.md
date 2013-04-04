@@ -25,13 +25,13 @@ Use the 'probability' query string parameter to specify the probability of the c
 http://unreliable.simplytestable.com/?error=503&probability=0.5
 
 20% chance of getting a HTTP 404 error:<br>
-http://unreliable.simplytestable.com/?error=503&probability=0.2
+http://unreliable.simplytestable.com/?error=404&probability=0.2
 
 60% chance of getting a HTTP 500 error:<br>
-http://unreliable.simplytestable.com/?error=503&probability=0.6
+http://unreliable.simplytestable.com/?error=500&probability=0.6
 
 100% chance of getting a HTTP 409 error:<br>
-http://unreliable.simplytestable.com/?error=503&probability=1
+http://unreliable.simplytestable.com/?error=409&probability=1
 
 0% chance of getting a HTTP 403 error:<br>
-http://unreliable.simplytestable.com/?error=503&probability=0
+http://unreliable.simplytestable.com/?error=403&probability=0
