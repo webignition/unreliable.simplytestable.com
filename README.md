@@ -3,6 +3,8 @@ unreliable.simplytestable.com
 
 Generate chosen error-related HTTP status codes with a chosen probability of occurring, part of the test suite used by simplytestable.com
 
+No content is returned. All that is returned is an HTTP header of the chosen status code.
+
 ## Choosing the error to return
 
 Use the 'error' query string parameter to specify the HTTP status code to use:
