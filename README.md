@@ -3,7 +3,7 @@ unreliable.simplytestable.com
 
 Generate chosen error-related HTTP status codes with a chosen probability of occurring, part of the test suite used by simplytestable.com
 
-No content is returned. All that is returned is an HTTP header of the chosen status code.
+A spot of rudimentary content is returned plus either a 200 OK or an error-related HTTP status code (depending on the probability you chose and some luck)/
 
 ## Choosing the error to return
 
