@@ -4,7 +4,7 @@ unreliable.simplytestable.com
 Simulate unreliable HTTP services. Pseudo-randomly encounter HTTP errors and very
 long response times.
 
-Useful if you're application consumes HTTP resources and you need to test:
+Useful if your application consumes HTTP resources and you need to test:
 
 - how your application handles unexpected HTTP errors
 - how your application handles very long response times (does your application time
