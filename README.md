@@ -1,11 +1,21 @@
 unreliable.simplytestable.com
 =============================
 
-Generate chosen error-related HTTP status codes with a chosen probability of occurring, part of the test suite used by simplytestable.com
+Simulate unreliable HTTP services. Pseudo-randomly encounter HTTP errors and very
+long response times.
 
-A spot of rudimentary content is returned plus either a 200 OK or an error-related HTTP status code (depending on the probability you chose and some luck).
+Useful if you're application consumes HTTP resources and you need to test:
 
-## Choosing the error to return
+- how your application handles unexpected HTTP errors
+- how your application handles very long response times (does your application time
+out gracefully?)
+
+Full of lovely fun features:
+
+- generate chosen error-related HTTP status codes with a chosen probability of occurring
+- encounter chosen response times with a chosen probability of occurring
+
+## Generating HTTP errors
 
 Use the 'error' query string parameter to specify the HTTP status code to use:
 
@@ -19,7 +29,7 @@ Use the 'probability' query string parameter to specify the probability of the c
 - http://unreliable.simplytestable.com/?error=500&probability=1
 - http://unreliable.simplytestable.com/?error=503&probability=0.5
 
-## Examples
+### HTTP error examples
 
 50% chance of getting a HTTP 503 error:<br>
 http://unreliable.simplytestable.com/?error=503&probability=0.5
@@ -35,3 +45,14 @@ http://unreliable.simplytestable.com/?error=409&probability=1
 
 0% chance of getting a HTTP 403 error:<br>
 http://unreliable.simplytestable.com/?error=403&probability=0
+
+## Generating very long HTTP response delays
+
+100% chance of a 1 second response time:
+http://unreliable.simplytestable.com/timeout/?timeout-delay=1&probability=1
+
+50% chance of a 10 second response time:
+http://unreliable.simplytestable.com/timeout/?timeout-delay=10&probability=1
+
+20% chance of a 300 second (5 minute) response time:
+http://unreliable.simplytestable.com/timeout/?timeout-delay=300&probability=0.2
